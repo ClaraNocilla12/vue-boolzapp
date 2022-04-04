@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Document</title>
+</head>
+
+<div id="app">
+
+    <body>
+        <div class="sfondo">
+            <div class="container mt-3">
+                <div class="row bg-light">
+                    <div class="col-4 border-end">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="./asset/img-boolzap/avatar_io.jpg" alt=""
+                                    class="rounded-circle img-fluid my_icon_avatar me-2">
+
+                                <span>Sofia</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-circle-notch me-2"></i>
+                                <i class="fa-solid fa-message me-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+
+                            </div>
+                        </div>
+
+                        <div class="row my_bg_blue py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="col-1">
+
+                                    <i class="fa-solid fa-bell-slash p-2 rounded-circle bg-white my_color_blue"></i>
+                                </div>
+                                <div class="col-7 mx-3">
+                                    <span>Ricevi notifice</span> <br>
+                                    <span class="secondary">Attiva notifiche desktop</span>
+                                </div>
+                                <div class="col-4"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="d-flex align-items-center">
+
+                                <div class="col-1">
+
+                                    <i class="fa-solid fa-magnifying-glass p-2"></i>
+                                </div>
+                                <div class="col-11">
+
+
+                                    <input class="border-0 w-100" type="text" class="form-control"
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                                        placeholder="Cerca o inizia una nuova chat">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul>
+                            <li class="d-flex justify-content-between" v-for="item in contacts">
+                                <div class="d-flex align-items-center">
+                                    <img :src="item.avatar" alt=""
+                                        class="rounded-circle img-fluid my_icon_avatar me-2">
+
+                                    <span>{{item.name}}</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span>12:00</span>
+
+                                </div>
+
+                            </li>
+                        </ul>
+
+
+
+
+                    </div>
+                    <div class="col-8">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+
+                                <img src="./asset/img-boolzap/avatar_1.jpg" alt=""
+                                    class="rounded-circle img-fluid my_icon me-2">
+
+                                <span>Michele <br>
+                                    <span>Ultimo accesso</span>
+                                </span>
+
+
+
+
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-circle-notch me-2"></i>
+                                <i class="fa-solid fa-message me-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+</div>
+
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./main.js"></script>
+
+</html>

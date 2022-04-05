@@ -171,15 +171,42 @@ var app = new Vue(
 
 
             indexChanged:0,
+            messageText:'',
+            clean:''
         },
         methods: {
 
             changeIndex: function(index) {
                 this.indexChanged = index;
                 console.log(indexChanged);
+            },
+
+            newMessage: function(){
+                let object={
+                message: this.messageText,
+                status: 'sent'
+                }
+
+                this.contacts[this.indexChanged].messages.push(object);
+
+                let response={
+                    message:'ok',
+                    status:'receved'
+                }
+
+                
+
+                setTimeout(
+                    () => {
+                        this.contacts[this.indexChanged].messages.push(response);},
+                        3000);
+                    
+
+                
+                
             }
 
+          
         }
 
-    }
-)
+    })

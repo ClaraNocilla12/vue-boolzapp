@@ -135,7 +135,7 @@
 
                             <input class="border-0 w-100" type="text" class="form-control"
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
-                                placeholder="Cerca o inizia una nuova chat">
+                                placeholder="Cerca o inizia una nuova chat" v-model="messageText" @keyUp.enter="newMessage">
 
                             <i class="fa-solid fa-microphone"></i>
 

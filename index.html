@@ -18,13 +18,13 @@
 
     <body>
         <div class="sfondo">
-            <div class="container mt-3">
-                <div class="row bg-light">
-                    <div class="col-4 border-end">
+            <div class="container pt-3 w-75">
+                <div class="row h-100">
+                    <div class="col-4 border-end bg-light">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center">
                                 <img src="./asset/img-boolzap/avatar_io.jpg" alt=""
-                                    class="rounded-circle img-fluid my_icon_avatar me-2">
+                                    class="rounded-circle img-fluid my_icon_avatar me-2 my-2">
 
                                 <span>Sofia</span>
                             </div>
@@ -68,11 +68,11 @@
                             </div>
                         </div>
 
-                        <ul>
-                            <li class="d-flex justify-content-between" v-for="item in contacts">
+                        <ul class="list-group">
+                            <li class="d-flex justify-content-between mb-2 pb-2 border-bottom"
+                                v-for="(item, index) in contacts" role="button" @click="changeIndex(index)">
                                 <div class="d-flex align-items-center">
-                                    <img :src="item.avatar" alt=""
-                                        class="rounded-circle img-fluid my_icon_avatar me-2">
+                                    <img :src="item.avatar" alt="" class="rounded-circle img-fluid my_icon_avatar me-2">
 
                                     <span>{{item.name}}</span>
                                 </div>
@@ -88,14 +88,14 @@
 
 
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 bg-light d-flex flex-column justify-content-around">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center">
 
-                                <img src="./asset/img-boolzap/avatar_1.jpg" alt=""
-                                    class="rounded-circle img-fluid my_icon me-2">
+                                <img :src="contacts[indexChanged].avatar" alt=""
+                                    class="rounded-circle img-fluid my_icon me-2 my-2">
 
-                                <span>Michele <br>
+                                <span>{{contacts[indexChanged].name}}<br>
                                     <span>Ultimo accesso</span>
                                 </span>
 
@@ -113,6 +113,33 @@
 
                         </div>
 
+
+                        <div class="my_bg p-3 h-100">
+
+                            <ul class="d-flex flex-column m-3 list-group list-group-flush">
+                                <li class=" list-group py-1 my-2 px-3 mx-3 rounded-3"
+                                    v-for="(item,index) in contacts[indexChanged].messages"
+                                    :class="(item.status == 'sent') ? 'align-self-end sent' : 'align-self-start recived' ">
+
+                                    {{item.message}}
+                                </li>
+                            </ul>
+
+
+
+
+                        </div>
+                        <div class="d-flex flex-nowrap align-items-center">
+
+                            <i class="fa-solid fa-magnifying-glass p-2 "></i>
+
+                            <input class="border-0 w-100" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                                placeholder="Cerca o inizia una nuova chat">
+
+                            <i class="fa-solid fa-microphone"></i>
+
+                        </div>
                     </div>
                 </div>
 

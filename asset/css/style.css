@@ -1,10 +1,10 @@
 .my_icon_avatar{
-    width: 13% !important;
+    width: 15% !important;
     
 }
 
 .my_icon{
-    width: 9% !important;
+    width: 8% !important;
 }
 
 .my_bg_blue{
@@ -15,3 +15,28 @@
     color: #99DAFC;
 }
 
+.my_bg{
+background-image: url('../img-boolzap/mine.jpg');
+
+
+}
+
+.sfondo{
+    height: 100vh;
+    background-image: linear-gradient(to bottom,
+    #349589 0vh,
+    #349589 15vh,
+    #D9DBD5 15vh,
+    #D9DBD5 100vh
+
+    );
+}
+
+.sent{
+    background-color: #D7F9BE;
+
+}
+
+.recived{
+    background-color: #fff;
+}

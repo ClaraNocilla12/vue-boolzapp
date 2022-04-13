@@ -40,3 +40,13 @@ background-image: url('../img-boolzap/mine.jpg');
 .recived{
     background-color: #fff;
 }
+
+.my-drop-button{
+    padding: 2% !important;
+    margin-left: 10px !important;
+    box-shadow: none !important;
+}
+
+.my-drop-menu{
+    transform: translate3d(-50%,10%,0)!important;
+}
